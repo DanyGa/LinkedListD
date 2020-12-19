@@ -7,38 +7,50 @@ using System.Threading.Tasks;
 namespace LinkedListD
 {
     class Menu
-    {
+    { 
         public void Inicio()
         {
-            Console.ForegroundColor = ConsoleColor.DarkBlue;
-            Console.WriteLine(" ");
-            Console.WriteLine("________________________________________________________________________________________________________________________");
+            int Opcion;
             Console.WriteLine("");
-            Console.WriteLine("                                        Lista Doblemente Enlazada ");
-            Console.WriteLine("");
-            Console.WriteLine("________________________________________________________________________________________________________________________");
+            Console.ForegroundColor = ConsoleColor.DarkMagenta;
+            Console.WriteLine("||========================================================||");
+            Console.WriteLine("||--------------------------------------------------------||");
+
+            Console.Write("||------------- ");
+            Console.ForegroundColor = ConsoleColor.Blue;
+            Console.Write("Lista Doblemente Enlazada");
+            Console.ForegroundColor = ConsoleColor.DarkMagenta;
+            Console.WriteLine(" ----------------||");
+
+            Console.WriteLine("||--------------------------------------------------------||"); ;
+            Console.WriteLine("||========================================================||");
+            Console.ForegroundColor = ConsoleColor.Gray;
             Console.WriteLine(" Elige una de las opciones ");
             Console.WriteLine("");
-            Console.WriteLine(" 1.- Agregar ");
-            Console.WriteLine(" 2.- Eliminar ");
-            Console.WriteLine(" 3.- Eliminar Lista ");
-            Console.WriteLine(" 4.- Mostrar Lista ");
-            Console.WriteLine(" 5.- Contar ");
-            Console.WriteLine(" 6.- Guardar ");
-            Console.WriteLine(" 7.- Cargar ");
-            Console.WriteLine(" 8.- Salir ");
-            Console.WriteLine("");
+            Console.WriteLine("                      1.- Agregar ");
+            Console.WriteLine("                      2.- Eliminar ");
+            Console.WriteLine("                      3.- Eliminar Lista ");
+            Console.WriteLine("                      4.- Mostrar Lista ");
+            Console.WriteLine("                      5.- Contar ");
+            Console.WriteLine("                      6.- Guardar ");
+            Console.WriteLine("                      7.- Cargar ");
+            Console.WriteLine("                      8.- Salir ");
+            Console.ForegroundColor = ConsoleColor.DarkMagenta;
+            Console.WriteLine("||========================================================||");
+            Console.WriteLine("||--------------------------------------------------------||");
+            Console.WriteLine("||--------------------------------------------------------||");
+            Console.WriteLine("||--------------------------------------------------------||");
+            Console.WriteLine("||========================================================||");
+            Console.ForegroundColor = ConsoleColor.Gray;
             Console.Write(" Opcion: ");
-            Console.ReadKey();
 
-            int Opcion;
+
+            Opcion = Convert.ToInt32(Console.ReadLine());
+            Console.ReadKey();
+            Lista seleccion = new Lista();
+
             do
             {
-
-                Opcion = Convert.ToInt32(Console.ReadLine());
-                Console.ReadKey();
-                Lista seleccion = new Lista();
-
                 switch (Opcion)
                 {
                     case 1:
@@ -66,9 +78,8 @@ namespace LinkedListD
                         Environment.Exit(-1);
                         break;
                 }
-
-            } while (Opcion != 9);
-
+            }
+            while (Opcion != 9);
         }
     }
 }
